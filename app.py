@@ -7,7 +7,7 @@ def create_app():
     app.config['MAIL_SERVER'] = 'smtp.gmail.com'
     app.config['MAIL_PORT'] = 465
     app.config['MAIL_USERNAME'] = 'clintonoshobugie@gmail.com'
-    app.config['MAIL_PASSWORD'] = 'mygodissogood'
+    app.config['MAIL_PASSWORD'] = 'myg*****good'
     app.config['MAIL_USE_TLS'] = False
     app.config['MAIL_USE_SSL'] = True
     app.config['MAIL_DEFAULT_SENDER'] = ('Anthony Herbert', 'clintonoshobugie@gmail.com')
@@ -20,7 +20,7 @@ def create_app():
     def index():
         msg = Message(
             'Flask Cheatsheet', 
-            sender=('Anthony', 'clintonoshobugie@gmail.com'),
+            sender=('clinton', 'clintonoshobugie@gmail.com'),
             recipients=['alanwuwong@gmail.com']
         )
         #msg.add_recipient('l7h01n+hp2hk5gk9ktc@sharklasers.com')
@@ -36,7 +36,7 @@ def create_app():
 
     @app.route('/bulk')
     def bulk():
-        users = [{'name' : 'Anthony', 'email' : 'anthony@email.com'}]
+        users = [{'name' : 'Clinton', 'email' : 'clintonoshobugie@gmail.com'}]
 
         with mail.connect() as conn:
             for user in users:
